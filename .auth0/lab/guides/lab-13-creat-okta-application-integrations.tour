@@ -25,35 +25,15 @@
     },
     {
       "file": "redirect/rewards.html",
-      "description": "## Configure the Rewards application `appClientId`\n\nThe Rewards application makes use of Okta's AuthJS SDK, which we will learn about more in the next module. For now, you'll simply need to configure the ClientID and Okta Org URL to make this integration work.\n\n1. Copy the `Client ID` that was displayed after you saved your integration. \n\n2. Here in VSCode, notice that `rewards.html` has opened for you automatically and the line containing the `appClientID` variable is highlighted. Currently there is a placeholder value of `\"XXXXXXXXXXXXXXXXXXXXXXX\"`\n\n3. Double select the placeholder value to highlight its contents and paste your `Client ID` value so that it is enclosed in the quotes.",
+      "description": "## Configure the Rewards application `appClientId`\n\nThe Rewards application makes use of Okta's AuthJS SDK, which we will learn about more in the next module. For now, you'll simply need to configure the ClientID and Okta Org URL to make this integration work. We're going to use [account-specific GitHub secrets](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces#adding-a-secret) for this.\n\nFirst, we'll create `REWARDS_CLIENT_ID`, which will be read in on the line highlighted above.\n\n1. Copy the `Client ID` that was displayed after you saved your integration. \n\n2. In a new browser tab, go to https://github.com\n\n3. On the Github page, select your profile picture at the top right, then select **Settings**\n4. In the *Code, planning, and automation* section of the sidebar, select **Codespaces**.\n5. To the right of *Codespaces secrets*, select **New secret**.\n6. Under *Name*, name your secret **REWARDS_CLIENT_ID**.\n7. Under *Value*, paste the Client ID value you copied in Step 1.\n8. Select the *Repository access* drop-down menu, add **OktaEdu/okta-learning-sign-in-users-and-secure-sessions**.\n9. Select **Add Secret**.\n\n>Ignore any prompts to reload your Codespace. We will do this once we're done adding secrets.",
       "line": 18,
-      "title": "Configure the Rewards application appClientId",
-      "selection": {
-        "start": {
-          "line": 18,
-          "character": 26
-        },
-        "end": {
-          "line": 18,
-          "character": 49
-        }
-      }
+      "title": "Configure the Rewards application appClientId"
     },
     {
       "file": "redirect/rewards.html",
-      "description": "## Configure the Rewards application `baseOktaURL`\n\n1. Notice that `rewards.html` is still open, but now the line containg the the `baseOktaURL` variable is highlighted. It contains the placeholder value `https://{domain}.okta.com`\n\n2. In your Okta Admin Dashboard, select your username in the top right hand corner and you should see your Okta org's URL.\n\n2. Hover your mouse over the URL and select **Copy to clipboard**.\n\n3. Back here in the code editor, highlight the placeholder value **excluding** the quotation marks. Ensure your cursor is now between the quotation marks. \n\n4. Paste in the value of your Okta org URL.\n\n6. [Click here to `Save`](command:workbench.action.files.save) your `rewards.html` file.",
+      "description": "## Configure the Rewards application `baseOktaURL`\n\nLet's repeat the process to add `BASE_OKTA_URL` to GitHub secrets. This will be used on the line highlighted above.\n\n1. In your **Okta Admin Console**, select your username in the top right hand corner and you should see your Okta org's URL.\n\n2. Hover your mouse over the URL and select **Copy to clipboard**.\n3. Switch back to the **GitHub** tab and select **New secret**.\n6. Under *Name*, name your secret **BASE_OKTA_ORG**.\n7. Under *Value*, enter https:// and then paste the value you copied in Step 2.\n8. Select the *Repository access* drop-down menu, add **OktaEdu/okta-learning-sign-in-users-and-secure-sessions**.\n9. Select **Add Secret**.\n\n>Ignore any prompts to reload your Codespace. We will do this once we're done adding secrets.\n",
       "line": 17,
-      "title": "Configure the Rewards application baseOktaURL",
-      "selection": {
-        "start": {
-          "line": 3,
-          "character": 153
-        },
-        "end": {
-          "line": 12,
-          "character": 1
-        }
-      }
+      "title": "Configure the Rewards application baseOktaURL"
     },
     {
       "title": "Create an Application Integration for the CRM app",
@@ -71,7 +51,7 @@
     },
     {
       "file": "redirect/crm.html",
-      "description": "## Configure the CRM application `appClientId`\n\n\n1. Copy the `Client ID` that was displayed after you saved your integration. \n\n2. Here in VSCode, notice that `crm.html` has opened for you automatically and the line containing the `appClientID` variable is highlighted. Currently there is a placeholder value of `\"XXXXXXXXXXXXXXXXXXXXXXX\"`\n\n3. Double click the placeholder value to highlight its contents and paste your `Client ID` value so that it is enclosed in the quotes.\n",
+      "description": "## Configure the CRM application `appClientId`\n\n\nLet's create `CRM_CLIENT_ID`, which will be read in on the line highlighted above.\n\n1. Copy the `Client ID` that was displayed after you saved your integration. \n\n2. Return to your Github tab and select **New secret**.\n6. Under *Name*, name your secret **CRM_CLIENT_ID**.\n7. Under *Value*, paste the Client ID value you copied in Step 1.\n8. Select the *Repository access* drop-down menu, add **OktaEdu/okta-learning-sign-in-users-and-secure-sessions**.\n9. Select **Add Secret**.\n\n> When prompted by Codespaces, select **Reload to apply**. This must be done so your environment will have access to the three secrets you added. \n",
       "line": 18,
       "selection": {
         "start": {
@@ -84,12 +64,6 @@
         }
       },
       "title": "Configure the CRM application appClientId"
-    },
-    {
-      "file": "redirect/crm.html",
-      "description": "## Configure the CRM application `baseOktaURL`\n\n1. Notice that `crm.html` is still open, but now the line containg the the `baseOktaURL` variable is highlighted. It contains the placeholder value `https://{domain}.okta.com`\n\n2. In your Okta Admin Dashboard, select your username in the top right hand corner and you should see your Okta org's URL.\n\n2. Hover your mouse over the URL and select **Copy to clipboard**.\n\n3. Back here in the code editor, highlight the placeholder value **excluding** the quotation marks. Ensure your cursor is now between the quotation marks. \n\n4. Paste in the value of your Okta org URL.\n\n6. [Click here to `Save`](command:workbench.action.files.save) your `crm.html` file.\n\n",
-      "line": 17,
-      "title": "Configure the CRM application baseOktaUrl"
     },
     {
       "title": "Configure an Authentication Policy",
