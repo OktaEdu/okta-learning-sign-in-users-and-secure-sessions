@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab overview",
-      "description": "## Create Okta Groups\n\n  🎯 **Objective**   Create Okta Groups -- one for Okta Ice Franchisees and one for Okta Ice customers.\n\n  🎬 **Scenario**   Franchisees and customers require distinct groups for application access and access policies.\n\n  ⏱️ **Duration**     10 minutes\n"
+      "description": "## Create Okta Groups\n\n  🎯 **Objective**   Create Okta Groups -- one for Alglens Scoop Shop's Franchisees and one for Alglens Scoop Shop's customers.\n\n  🎬 **Scenario**   Franchisees and customers require distinct groups for application access and access policies.\n\n  ⏱️ **Duration**     10 minutes\n"
     },
     {
       "title": "Create a Franchisee group",
