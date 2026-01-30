@@ -20,7 +20,7 @@
     8080, //Web App
   ],
   "shutdownAction": "stopCompose",
-  "postStartCommand": "npm install -g npm@latest",
+  "postStartCommand": "npm install -g npm@latest && npm install",
   "waitFor": "postStartCommand",
   "remoteUser": "node"
 }
