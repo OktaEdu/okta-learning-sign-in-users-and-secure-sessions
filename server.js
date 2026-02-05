@@ -26,13 +26,13 @@ app.get("/redirect/rewards", (req, res) => {
   });
 });
 
-app.get("/redirect/rewards", (req, res) => {
+app.get("/redirect/crm", (req, res) => {
   // 1. Read secrets from the Codespace environment
   const oktaUrl = process.env.BASE_OKTA_URL;
-  const crmClientId = process.env.REWARDS_CLIENT_ID;
+  const crmClientId = process.env.CRM_CLIENT_ID;
 
   // 2. Render the 'rewards' view and pass the variables to it
-  res.render("redirect/rewards", {
+  res.render("redirect/crm", {
     oktaUrl: oktaUrl,
     crmClientId: crmClientId,
   });
