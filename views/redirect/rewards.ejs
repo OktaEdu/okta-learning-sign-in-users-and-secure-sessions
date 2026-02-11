@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Partner CRM App (Redirect)</title>
+    <title>Customer Rewards App (Redirect)</title>
 
     <!-- Okta JS SDK @ Okta CDN -->
     <script
@@ -14,8 +14,8 @@
 
     <script type="text/javascript">
       // TODO: UPDATE THESE FOR YOUR OKTA TENANT
-      var baseOktaURL = BASE_OKTA_URL; // 👈 update with your Okta Org URL
-      var appClientID = CRM_CLIENT_ID; // 👈 update with your CRM App Client ID
+      var baseOktaURL = "<%= oktaUrl %>";
+      var appClientID = "<%= rewardsClientId %>";
 
       var redirectURL =
         window.location.protocol +
@@ -84,14 +84,14 @@
   </head>
 
   <body>
-    <b>Partner CRM App</b>
+    <b>Customer Rewards</b>
     <hr />
     <div id="uxActiveOptions">
       <b>Functions:</b>
       <br /><button onclick="authClient.closeSession();">
         Close Okta Session
       </button>
-      <p><a href="../index.html">Return to Portal</a></p>
+      <p><a href="../">Return to Portal</a></p>
     </div>
     <hr />
     <div id="content-jwt"></div>
